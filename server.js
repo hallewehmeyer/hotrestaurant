@@ -3,6 +3,7 @@ const path = require('path');
 
 const app = express();
 
+
 app.get('/', (req, res) => {
     const filePath = path.join(__dirname, 'public/home.html');
     return res.sendFile(filePath);
@@ -18,4 +19,8 @@ app.get('/tables', (req, res) => {
     return res.sendFile(filePath);
 });
 
-app.listen(6969);
+app.post("/reserve", req, res)  {
+
+}
+app.listen(1500);
+
